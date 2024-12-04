@@ -1,0 +1,46 @@
+  /* Basic styling to make the header and navigation look nicer */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(253, 228, 228);
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333333;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+  }
+  nav ul {
+    list-style-type: lower-roman;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: rgb(213, 31, 31);
+    text-decoration: double;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+    #section2 ul li{
+        display: inline;
+    }
+  }
+  img {
+    width: 10vw;
+    border-radius: 25%;
+    position:relative;
+    /* top: 0vw; */
+    left: 85vw;
+  }
+  #copyright{
+    align-items: center;
+    justify-self: center;
+  }
+  #mailbox{
+    text-decoration:overline;
+justify-self: center;
+  }
