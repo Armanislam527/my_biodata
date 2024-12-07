@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arman - Software Engineer Enthusiast</title>
+    <link rel="icon" href="arman_office.jpeg" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+     <style>/* General Styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+      
+      /* Header Styling */
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #222;
+        color: #fff;
+        border-bottom: 4px solid #4caf50;
+      }
+      
+      header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+      
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      
+      header p {
+        margin: 5px 0;
+      }
+      
+      /* Section Styling */
+      section {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 900px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      h2 {
+        color: #4caf50;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+      
+      ul {
+        padding-left: 20px;
+      }
+      
+      ul li {
+        margin-bottom: 10px;
+      }
+      
+      /* Footer Styling */
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #222;
+        color: #fff;
+      }
+      
+      footer button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      footer button:hover {
+        background-color: #45a049;
+      }
+      </style>
+  </head>
+  <body>
+    <header>
+      <div id="profile">
+        <img src="arman_office.jpeg" alt="Arman Islam" />
+        <h1>Arman</h1>
+        <p>Software Engineer Enthusiast | Aspiring Full-Stack Developer</p>
+        <p>
+          <strong>Address:</strong> Bangabandhu Hall, Pabna University of Science and Technology <br />
+          <strong>Phone:</strong> <a href="tel:+8801521751005">+88 01521751005</a> (WhatsApp available) <br />
+          <strong>Email:</strong> <a href="mailto:armanislam527@gmail.com">armanislam527@gmail.com</a> <br />
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/armanislam527/" target="_blank">linkedin.com/in/armanislam527</a> <br />
+          <strong>Website:</strong> <a href="https://weatherapplication-arman.netlify.app/" target="_blank">weatherapplication-arman.netlify.app</a>
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Professional Summary -->
+      <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>
+          I am an aspiring software engineer currently pursuing a B.Sc. in Information and Communication Engineering. 
+          I am passionate about learning and building innovative digital solutions, focusing on web development 
+          and full-stack technologies like HTML, CSS, JavaScript, and Java. My goal is to contribute to impactful projects 
+          and develop my skills to become a proficient full-stack software developer.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>B.Sc. in Information and Communication Engineering (Ongoing)</strong><br />
+            Pabna University of Science and Technology, Pabna<br />
+            Graduation Date: June 2027
+          </li>
+          <li>
+            <strong>HSC (Science)</strong><br />
+            Dinajpur Govt. CT College, Dinajpur (Under Dinajpur Education Board)<br />
+            GPA: 5.0<br />
+            Graduation Date: 2022
+          </li>
+          <li>
+            <strong>SSC</strong><br />
+            Adhyapak Afjal Sobhan High School, Osurkoat, Ambari, Parbatipur, Dinajpur<br />
+            GPA: 5.0<br />
+            Graduation Date: 2020
+          </li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python, Java, C, C++</li>
+          <li>Git and GitHub</li>
+        </ul>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Fluent Communication</li>
+          <li>Leadership and Teamwork</li>
+        </ul>
+      </section>
+
+      <!-- Work Experience -->
+      <section id="work-experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li>
+            <strong>Marketing Employee</strong><br />
+            Shefra Tech Company, Rajapur, Pabna<br />
+            <a href="https://shefra.web.app/" target="_blank">Company Website</a><br />
+            October 2024 - Present<br />
+            <p>Collaborated with the marketing team to promote tech solutions, increasing awareness in the local market.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>Weather Forecast Application</strong><br />
+            <p>A frontend web application for weather forecasting using search location APIs and browser location detection.</p>
+            <p><strong>Role:</strong> Creator</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+            <a href="https://weatherapplication-arman.netlify.app/" target="_blank">View Project</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+          <li>
+            <strong>Master Git and GitHub - Beginner to Expert</strong><br />
+            Issued by: Udemy<br />
+            <a href="https://www.udemy.com/certificate/UC-1f04b4b9-7b97-4929-8f6d-a162696c58da/" target="_blank">View Certificate</a><br />
+            Date Obtained: August 23, 2024
+          </li>
+          <li>
+            <strong>Mathematical Olympiad Winner (Higher Secondary Category)</strong><br />
+            Online Selection, December 30, 2022
+          </li>
+        </ul>
+      </section>
+
+      <!-- Languages -->
+      <section id="languages">
+        <h2>Languages</h2>
+        <ul>
+          <li>Bengali: Native fluency (Reading, Writing, Listening, Speaking)</li>
+          <li>English: Proficient (Reading, Writing, Listening, Speaking)</li>
+          <li>Hindi: Good (Reading, Listening, Speaking)</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Print Button -->
+    <footer>
+      <p>&copy; 2024 Arman . All rights reserved.</p>
+      <button onclick="window.print()">Print CV</button>
+    </footer>
+
+    <!-- Hidden Roll and Registration Numbers -->
+    <section id="hidden-info" style="display: none;">
+      <p>SSC Roll: 231417 | Registration: 1717758829</p>
+      <p>HSC Roll: 149008 | Registration: 1717758829</p>
+    </section>
+  </body>
+</html>

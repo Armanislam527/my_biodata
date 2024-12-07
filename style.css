@@ -36,6 +36,9 @@
     /* top: 0vw; */
     left: 85vw;
   }
+  #section1{
+    display: flow-root;
+  }
   #copyright{
     align-items: center;
     justify-self: center;
