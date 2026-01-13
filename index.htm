@@ -116,6 +116,57 @@
 		footer button:hover {
 			background-color: #45a049;
 		}
+
+		@media print {
+			* {
+				margin: auto;
+				padding: 0;
+				border: none;
+				box-shadow: none;
+				color: #000 !important;
+				padding-bottom: 0 !important;
+				margin-bottom: 0 !important;
+				border-radius: 0 !important;
+				border-bottom: none;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+				padding: 0 !important;
+			}
+
+			.none {
+				display: none !important;
+			}
+
+			h2 {
+				border-bottom: none !important;
+			}
+
+			body {
+				background-color: #fff;
+			}
+
+			header,
+			footer {
+				background-color: #fff;
+				color: #000;
+				border-bottom: none;
+			}
+
+			section {
+				box-shadow: none;
+				border: none;
+			}
+
+			footer button {
+				display: none;
+			}
+
+			#summary {
+				display: none;
+			}
+
+
+		}
 	</style>
 </head>
 
@@ -237,33 +288,34 @@
 			<h2>Projects</h2>
 			<ul>
 				<li><strong>Development Of A Delivery Robot Drone Using Three.js</strong><br />
-					<p>
+					<p class="none">
 						A 3D model of a delivery robot drone created using
 						Three.js, showcasing design and animation skills.
 					</p>
-					<p><strong>Role:</strong> Creator</p>
-					<p>
+					<p class="none"><strong>Role:</strong> Creator</p>
+					<p class="none">
 						<strong>Technologies Used:</strong> JavaScript,
 						Three.js
 					</p>
-					<a href="https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/"
+					<a class="none" href="https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/"
 						target="_blank">View Project Portfolio</a><br>
-					<code>Also Open For Open Investment</code>
+					<code class="none">Also Open For Open Investment</code>
 
 				</li>
 				<li>
 					<strong>Weather Forecast Application</strong><br />
-					<p>
+					<p class="none">
 						A frontend web application for weather forecasting
 						using search location APIs and browser location
 						detection.
 					</p>
-					<p><strong>Role:</strong> Creator</p>
-					<p>
+					<p class="none"><strong>Role:</strong> Creator</p>
+					<p class="none">
 						<strong>Technologies Used:</strong> HTML, CSS,
 						JavaScript
 					</p>
-					<a href="https://weatherapplication-arman.netlify.app/" target="_blank">View Project</a>
+					<a class="none" href="https://weatherapplication-arman.netlify.app/" target="_blank">View
+						Project</a>
 				</li>
 			</ul>
 		</section>
@@ -277,7 +329,7 @@
 						Perticipated in World Robotics Olympiad 2025 (Rangpur Region)
 					</strong> <br>
 					Issued by: WRO Bangladesh<br />
-					<div id="Wro_certificate">
+					<div class="none" id="Wro_certificate">
 						<a href="Wro_2025.jpg" target="_blank">View Certificate</a><br />
 						<!--<img src="Wro_2025.jpg" alt="WRO Certificate" />-->
 
@@ -287,7 +339,7 @@
 				<li>
 					<strong>Master Git and GitHub - Beginner to Expert</strong><br />
 					Issued by: Udemy<br />
-					<a href="https://www.udemy.com/certificate/UC-1f04b4b9-7b97-4929-8f6d-a162696c58da/"
+					<a class="none" href="https://www.udemy.com/certificate/UC-1f04b4b9-7b97-4929-8f6d-a162696c58da/"
 						target="_blank">View Certificate</a><br />
 					Date Obtained: August 23, 2024
 				</li>
@@ -326,7 +378,7 @@
 
 	<!-- Print Button -->
 	<footer>
-		<p>&copy; 2024 Arman Islam. All rights reserved.</p>
+		<p>&copy; 2026 Arman Islam. All rights reserved.</p>
 		<button onclick="window.print()">Print CV</button>
 	</footer>
 
