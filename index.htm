@@ -199,18 +199,19 @@
 	<main>
 		<!-- Professional Summary -->
 		<section id="summary">
-			<h2>Professional Summary</h2>
-			<p>
-				I am an aspiring software engineer currently pursuing a
-				B.Sc. in Information and Communication Engineering at Pabna
-				University of Science and Technology, currently in my second
-				year of study. I am passionate about learning and building
-				innovative digital solutions, focusing on web development
-				and full-stack technologies like HTML, CSS, JavaScript, and
-				Java. My goal is to contribute to impactful projects and
-				develop my skills to become a proficient full-stack software
-				developer.
-			</p>
+			<h2>
+				<Professional Summary</h2>
+					<p>
+						I am an aspiring software engineer currently pursuing a
+						B.Sc. in Information and Communication Engineering at Pabna
+						University of Science and Technology, currently in my second
+						year of study. I am passionate about learning and building
+						innovative digital solutions, focusing on web development
+						and full-stack technologies like HTML, CSS, JavaScript, and
+						Java. My goal is to contribute to impactful projects and
+						develop my skills to become a proficient full-stack software
+						developer.
+					</p>
 		</section>
 
 		<!-- Education -->
@@ -378,7 +379,7 @@
 
 	<!-- Print Button -->
 	<footer>
-		<p>&copy; 2026 Arman Islam. All rights reserved.</p>
+		<p></p>
 		<button onclick="window.print()">Print CV</button>
 	</footer>
 
@@ -388,7 +389,9 @@
 		<p>HSC Roll: 149008 | Registration: 1717758829</p>
 	</section>
 	<script>
-
+		const today = new Date();
+		const year = today.getFullYear();
+		document.querySelector('footer p').innerHTML = `&copy; ${year} Arman Islam. All rights reserved.`;
 	</script>
 </body>
 
