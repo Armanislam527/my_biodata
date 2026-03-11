@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Arman - Software Engineer Enthusiast</title>
 	<link rel="icon" href="arman_office.jpeg" type="image/x-icon" />
-	<!-- <link rel="stylesheet" href="style.css" /> -->
 	<style>
 		/* General Styling */
 		body {
@@ -79,16 +78,13 @@
 			color: #45a049;
 		}
 
-		/*#Wro_certificate img {
-			height: 400px;
-			display: none;
-			max-width: 100%;
-			height: auto;
-			margin-top: 10px;
-		}*/
 		a {
 			color: rgba(126, 45, 126, 0.667);
 			text-decoration: none;
+		}
+
+		.print {
+			display: none;
 		}
 
 		a:hover {
@@ -119,42 +115,96 @@
 
 		@media print {
 			* {
-				margin: auto;
+				margin: 0;
 				padding: 0;
 				border: none;
 				box-shadow: none;
 				color: #000 !important;
-				padding-bottom: 0 !important;
-				margin-bottom: 0 !important;
 				border-radius: 0 !important;
-				border-bottom: none;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-				padding: 0 !important;
+			}
+
+			body {
+				background-color: #fff;
+				font-size: 11pt;
+				line-height: 1.2;
+			}
+
+			section {
+				margin: 0 0 5px 0;
+				padding: 3px 0;
+				max-width: 100%;
 			}
 
 			.none {
 				display: none !important;
 			}
 
-			h2 {
+			h2,
+			h3 {
 				border-bottom: none !important;
+				padding: 0;
+				margin: 5px 0 0 0;
+				font-size: 12pt;
 			}
 
-			body {
-				background-color: #fff;
+			h3 {
+				margin-top: 2px;
 			}
 
-			header,
-			footer {
+			/* Print Header Layout - Image Left, Text Right and Up */
+			header {
 				background-color: #fff;
 				color: #000;
-				border-bottom: none;
+				padding: 0 0 2px 0;
+				text-align: left;
+				border-bottom: 1px solid #000;
 			}
 
-			section {
-				box-shadow: none;
-				border: none;
+			header #profile {
+				display: flex;
+				align-items: flex-start;
+				gap: 15px;
+			}
+
+			header img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				margin: 0;
+				float: left;
+			}
+
+			header h1 {
+				font-size: 16pt;
+				margin: 0;
+				line-height: 1;
+			}
+
+			header p {
+				margin: 2px 0;
+				font-size: 9pt;
+				line-height: 1.2;
+			}
+
+			header a {
+				color: #000 !important;
+			}
+
+			/* Compact spacing for all printed content */
+			ul {
+				padding-left: 15px;
+				margin: 2px 0;
+			}
+
+			ul li {
+				margin-bottom: 1px;
+				font-size: 9pt;
+				line-height: 1.1;
+				list-style: square;
+			}
+
+			.print {
+				display: block;
 			}
 
 			footer button {
@@ -165,7 +215,10 @@
 				display: none;
 			}
 
-
+			/* Reduce spacing between sections */
+			main {
+				padding: 0;
+			}
 		}
 	</style>
 </head>
@@ -174,25 +227,27 @@
 	<header>
 		<div id="profile">
 			<img src="arman_office.jpeg" alt="Arman Islam" />
-			<h1>Arman</h1>
-			<p>
-				Software Engineer Enthusiast | Aspiring Full-Stack Developer
-			</p>
-			<p>
-				<strong>Address:</strong> Shadhinata Hall, Pabna University
-				of Science and Technology <br />
-				<strong>Phone:</strong>
-				<a href="tel:+8801521751005">+88 01521751005</a> (WhatsApp
-				available) <br />
-				<strong>Email:</strong>
-				<a href="mailto:armanislam527@gmail.com">armanislam527@gmail.com</a>
-				<br />
-				<strong>LinkedIn:</strong>
-				<a href="https://www.linkedin.com/in/armanislam527/" target="_blank">/armanislam527</a>
-				<br />
-				<strong>GitHub:</strong>
-				<a href="https://github.com/armanislam527" target="_blank">/armanislam527</a>
-			</p>
+			<div style="flex: 1;">
+				<h1>Arman</h1>
+				<p>
+					Software Engineer Enthusiast | Aspiring Full-Stack Developer
+				</p>
+				<p>
+					<strong>Address:</strong> Shadhinata Hall, Pabna University
+					of Science and Technology <br />
+					<strong>Phone:</strong>
+					<a href="tel:+8801521751005">+88 01521751005</a> (WhatsApp
+					available) <br />
+					<strong>Email:</strong>
+					<a href="mailto:armanislam527@gmail.com">armanislam527@gmail.com</a>
+					<br />
+					<strong>LinkedIn:</strong>
+					<a href="https://www.linkedin.com/in/armanislam527/" target="_blank">/armanislam527</a>
+					<br />
+					<strong>GitHub:</strong>
+					<a href="https://github.com/armanislam527" target="_blank">/armanislam527</a>
+				</p>
+			</div>
 		</div>
 	</header>
 
@@ -200,22 +255,22 @@
 		<!-- Professional Summary -->
 		<section id="summary">
 			<h2>
-				<Professional Summary</h2>
-					<p>
-						I am an aspiring software engineer currently pursuing a
-						B.Sc. in Information and Communication Engineering at Pabna
-						University of Science and Technology, currently in my second
-						year of study. I am passionate about learning and building
-						innovative digital solutions, focusing on web development
-						and full-stack technologies like HTML, CSS, JavaScript, and
-						Java. My goal is to contribute to impactful projects and
-						develop my skills to become a proficient full-stack software
-						developer.
-					</p>
+				Professional Summary </h2>
+			<p>
+				I am an aspiring software engineer currently pursuing a
+				B.Sc. in Information and Communication Engineering at Pabna
+				University of Science and Technology, currently in my second
+				year of study. I am passionate about learning and building
+				innovative digital solutions, focusing on web development
+				and full-stack technologies like HTML, CSS, JavaScript, and
+				Java. My goal is to contribute to impactful projects and
+				develop my skills to become a proficient full-stack software
+				developer.
+			</p>
 		</section>
 
 		<!-- Education -->
-		<section id="education">
+		<section id="education" class="none">
 			<h2>Education</h2>
 			<ul>
 				<li>
@@ -241,20 +296,40 @@
 				</li>
 			</ul>
 		</section>
+		<section id="education" class="print">
+			<h2>Education</h2>
+			<ul>
+				<li>
+					<strong>B.Sc. in ICE (Ongoing)</strong> | PUST |
+					Currently in 3 <sub>rd</sub> Year | June 2027 (Expected)
+				</li>
+				<li>
+					<strong>HSC (Science)</strong>
+					| Dinajpur Board | CGPA: 5.0 | 2022
+
+				</li>
+				<li>
+					<strong>SSC (Science)</strong>
+					| Dinajpur Board | CGPA: 5.0 | 2020
+
+				</li>
+			</ul>
+		</section>
 
 		<!-- Skills -->
-		<section id="skills">
+		<section id="skills" class="none">
 			<h2>Skills</h2>
 			<h3>Technical Skills</h3>
 			<ul>
 				<li>HTML, CSS, JavaScript</li>
 				<li>Python, Java, C, C++</li>
-				<li>React.js</li>
+				<li>React.js, Node.js</li>
+
 				<li>Docker</li>
 				<li>Git and GitHub</li>
 				<li>Linux Operating System</li>
 				<li>Raspberry Pi Basic to Advance</li>
-				<li>Microcontroller Programming (Arduino, ESP8266)</li>
+				<li>Microcontroller Programming (PIC, Arduino, ESP Series)</li>
 				<li>ROS basics</li>
 				<li>IoT Basics</li>
 				<li>3D Printing and Slicing (With Hands On Experience)</li>
@@ -262,8 +337,24 @@
 			</ul>
 			<h3>Soft Skills</h3>
 			<ul>
-				<li>Fluent Communication</li>
+				<li>Fluent Communication (Debator)</li>
 				<li>Leadership and Teamwork</li>
+			</ul>
+		</section>
+		<section id="skills" class="print">
+			<h2>Skills</h2>
+			<h3>Technical Skills</h3>
+			<ul>
+				<li>HTML | CSS | JavaScript | Python | Java | C | C++ | React.js | Node.js | Android Studio With Java
+				</li>
+				<li>Docker | Git and GitHub</li>
+				<li>Linux OS | Raspberry Pi Basic to Advance | Microcontroller Programming (PIC, Arduino, ESP Series) |
+					ROS basics | IoT Basics | 3D Printing and Slicing (With Hands On Experience)</li>
+
+			</ul>
+			<h3>Soft Skills</h3>
+			<ul>
+				<li>Fluent Communication (Debator) | Leadership and Teamwork</li>
 			</ul>
 		</section>
 
@@ -273,11 +364,11 @@
 			<ul>
 				<li>
 					<strong>Junior Web Developer</strong><br />
-					<b>Shefra</b> Tech Company, Rajapur, Pabna<br />
-					<a href="https://shefra.web.app/" target="_blank">Company Website</a><br />
-					October,23, 2024 - Present<br />
+					<b>Shefra</b> Tech Company, Rajapur, Pabna
+					<a class="none" href="https://shefra.web.app/" target="_blank">Company Website</a><br />
+					October,23, 2024 - Present
 					<p>
-						Collaborated with the marketing team to promote tech
+						Frontend Dev and Collaborated with the marketing team to promote tech
 						solutions, increasing awareness in the local market.
 					</p>
 				</li>
@@ -288,7 +379,7 @@
 		<section id="projects">
 			<h2>Projects</h2>
 			<ul>
-				<li><strong>Development Of A Delivery Robot Drone Using Three.js</strong><br />
+				<li><strong>Development Of A Delivery Robot Drone Using Three.js</strong>
 					<p class="none">
 						A 3D model of a delivery robot drone created using
 						Three.js, showcasing design and animation skills.
@@ -300,11 +391,13 @@
 					</p>
 					<a class="none" href="https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/"
 						target="_blank">View Project Portfolio</a><br>
-					<code class="none">Also Open For Open Investment</code>
+					<code>Also Open For Open Investment</code>
+					<div class="print">https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/
+					</div>
 
 				</li>
 				<li>
-					<strong>Weather Forecast Application</strong><br />
+					<strong>Weather Forecast Application</strong>
 					<p class="none">
 						A frontend web application for weather forecasting
 						using search location APIs and browser location
@@ -317,21 +410,22 @@
 					</p>
 					<a class="none" href="https://weatherapplication-arman.netlify.app/" target="_blank">View
 						Project</a>
+					<div class="print">https://weatherapplication-arman.netlify.app/</div>
 				</li>
 			</ul>
 		</section>
 
 		<!-- Certifications -->
-		<section id="certifications">
-			<h2>Certifications</h2>
+		<section id="certifications" class="none">
+			<h2>Certifications </h2>
 			<ul>
 				<li>
 					<strong>
 						Perticipated in World Robotics Olympiad 2025 (Rangpur Region)
 					</strong> <br>
-					Issued by: WRO Bangladesh<br />
+					<div>Issued by: WRO Bangladesh</div>
 					<div class="none" id="Wro_certificate">
-						<a href="Wro_2025.jpg" target="_blank">View Certificate</a><br />
+						<a href="Wro_2025.jpg" target="_blank">View Certificate</a>
 						<!--<img src="Wro_2025.jpg" alt="WRO Certificate" />-->
 
 					</div>
@@ -348,7 +442,7 @@
 					<strong>ICT Olympiad Winner (Higher Secondary
 						Category)</strong><br />
 					Install ICT Olympiad, Dinajpur<br />
-					First Position (Category C, Higher Secondary)<br />
+					First Position <br />
 					Date: December 2022
 				</li>
 				<li>
@@ -359,7 +453,36 @@
 				</li>
 			</ul>
 		</section>
+		<section id="certifications" class="print">
+			<h2>Certifications </h2>
+			<ul>
+				<li>
+					<strong>
+						Perticipated in World Robotics Olympiad 2025 (Rangpur Region)
+					</strong>
+					Issued by: WRO Bangladesh<br>
 
+				</li>
+				<li>
+					<strong>Master Git and GitHub - Beginner to Expert</strong>
+					Issued by: Udemy<br />
+
+				</li>
+				<li>
+					<strong>ICT Olympiad Winner (Higher Secondary
+						Category)</strong>|
+					Install ICT Olympiad, Dinajpur|
+					First Position
+
+				</li>
+				<li>
+					<strong>Mathematical Olympiad Winner (Higher Secondary
+						Category)</strong>|
+					Online Selection, 2022 |
+					Perticipated in the 2023 National Mathematical Olympiad,Bangladesh<br />
+				</li>
+			</ul>
+		</section>
 		<!-- Languages -->
 		<section id="languages">
 			<h2>Languages</h2>
