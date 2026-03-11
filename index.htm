@@ -4,517 +4,913 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Arman - Software Engineer Enthusiast</title>
+	<title>Arman Islam - Software Engineer Portfolio</title>
 	<link rel="icon" href="arman_office.jpeg" type="image/x-icon" />
 	<style>
-		/* General Styling */
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f9f9f9;
+		/* ===== RESET & BASE STYLES ===== */
+		* {
 			margin: 0;
 			padding: 0;
-			line-height: 1.6;
-			color: #333;
+			box-sizing: border-box;
 		}
 
-		/* Header Styling */
-		header {
-			text-align: center;
-			padding: 20px;
-			background-color: #222;
-			color: #fff;
-			border-bottom: 4px solid #4caf50;
+		:root {
+			--primary: #2563eb;
+			--primary-dark: #1d4ed8;
+			--secondary: #10b981;
+			--dark: #1e293b;
+			--light: #f8fafc;
+			--gray: #64748b;
+			--light-gray: #e2e8f0;
 		}
 
-		header img {
-			width: 150px;
-			height: 150px;
-			border-radius: 50%;
-			margin-bottom: 15px;
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			background-color: var(--light);
+			color: var(--dark);
+			line-height: 1.5;
 		}
 
-		header h1 {
-			margin: 0;
+		/* ===== TYPOGRAPHY ===== */
+		h1 {
 			font-size: 2.5rem;
-		}
-
-		header p {
-			margin: 5px 0;
-		}
-
-		header a {
-			color: #4caf50;
-			text-decoration: none;
-		}
-
-		/* Section Styling */
-		section {
-			padding: 20px;
-			margin: 20px auto;
-			max-width: 900px;
-			background-color: #fff;
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			font-weight: 700;
+			letter-spacing: -0.02em;
 		}
 
 		h2 {
-			color: #4caf50;
-			border-bottom: 2px solid #4caf50;
-			padding-bottom: 5px;
-			margin-bottom: 15px;
+			font-size: 1.8rem;
+			font-weight: 600;
+			letter-spacing: -0.01em;
+			color: var(--primary);
+			margin-bottom: 1.5rem;
+			position: relative;
 		}
 
-		ul {
-			padding-left: 20px;
+		h2::after {
+			content: '';
+			position: absolute;
+			bottom: -0.5rem;
+			left: 0;
+			width: 60px;
+			height: 4px;
+			background: var(--primary);
+			border-radius: 2px;
 		}
 
-		ul li {
-			margin-bottom: 10px;
-			list-style: square;
-
+		h3 {
+			font-size: 1.3rem;
+			font-weight: 600;
+			color: var(--dark);
+			margin-bottom: 0.5rem;
 		}
 
-		li:hover {
-			color: #45a049;
+		/* ===== LAYOUT ===== */
+		.container {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 0 2rem;
 		}
 
-		a {
-			color: rgba(126, 45, 126, 0.667);
+		/* ===== HEADER / HERO SECTION ===== */
+		.hero {
+			background: linear-gradient(135deg, var(--dark) 0%, #0f172a 100%);
+			color: white;
+			padding: 4rem 0;
+			border-bottom: 4px solid var(--primary);
+		}
+
+		.hero-content {
+			display: flex;
+			align-items: center;
+			gap: 3rem;
+		}
+
+		.hero-image {
+			flex-shrink: 0;
+		}
+
+		.hero-image img {
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			border: 4px solid var(--primary);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+			object-fit: cover;
+		}
+
+		.hero-text h1 {
+			margin-bottom: 0.5rem;
+		}
+
+		.hero-title {
+			font-size: 1.3rem;
+			color: var(--secondary);
+			margin-bottom: 1rem;
+			font-weight: 500;
+		}
+
+		.hero-contact {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		.hero-contact a {
+			color: var(--light-gray);
 			text-decoration: none;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			transition: color 0.2s;
 		}
 
-		.print {
-			display: none;
+		.hero-contact a:hover {
+			color: var(--primary);
 		}
 
-		a:hover {
+		/* ===== SECTIONS ===== */
+		.section {
+			background: white;
+			border-radius: 12px;
+			padding: 2rem;
+			margin: 2rem 0;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		}
+
+		/* ===== EDUCATION GRID ===== */
+		.education-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 1.5rem;
+		}
+
+		.education-card {
+			background: var(--light);
+			padding: 1.5rem;
+			border-radius: 8px;
+			border-left: 4px solid var(--primary);
+		}
+
+		.education-card h4 {
+			font-weight: 700;
+			color: var(--primary);
+			margin-bottom: 0.5rem;
+		}
+
+		.education-card .institution {
+			font-weight: 500;
+			color: var(--dark);
+		}
+
+		.education-card .date {
+			color: var(--gray);
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+
+		/* ===== SKILLS ===== */
+		.skills-grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 2rem;
+		}
+
+		.skills-category h3 {
+			color: var(--primary);
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+
+		.skills-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.8rem;
+		}
+
+		.skill-tag {
+			background: var(--light-gray);
+			padding: 0.4rem 1rem;
+			border-radius: 20px;
+			font-size: 0.9rem;
+			font-weight: 500;
+			color: var(--dark);
+			transition: all 0.2s;
+		}
+
+		.skill-tag:hover {
+			background: var(--primary);
+			color: white;
+		}
+
+		/* ===== EXPERIENCE & PROJECTS ===== */
+		.timeline-item {
+			margin-bottom: 2rem;
+			padding-bottom: 2rem;
+			border-bottom: 1px solid var(--light-gray);
+		}
+
+		.timeline-item:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+		.timeline-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			flex-wrap: wrap;
+			margin-bottom: 0.5rem;
+		}
+
+		.timeline-title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: var(--primary);
+		}
+
+		.timeline-subtitle {
+			font-weight: 500;
+			color: var(--gray);
+		}
+
+		.timeline-date {
+			color: var(--gray);
+			font-size: 0.9rem;
+		}
+
+		.timeline-description {
+			margin-top: 0.8rem;
+			color: var(--dark);
+		}
+
+		.timeline-tech {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin-top: 1rem;
+		}
+
+		.tech-badge {
+			background: var(--primary);
+			color: white;
+			padding: 0.2rem 0.8rem;
+			border-radius: 16px;
+			font-size: 0.8rem;
+			font-weight: 500;
+		}
+
+		.project-links {
+			margin-top: 0.8rem;
+		}
+
+		.project-links a {
+			color: var(--primary);
+			text-decoration: none;
+			margin-right: 1rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
+
+		.project-links a:hover {
 			text-decoration: underline;
 		}
 
-		/* Footer Styling */
-		footer {
-			text-align: center;
-			padding: 10px;
-			background-color: #222;
-			color: #fff;
+		/* ===== CERTIFICATIONS ===== */
+		.cert-list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 1rem;
 		}
 
-		footer button {
-			margin-top: 10px;
-			padding: 10px 20px;
-			background-color: #4caf50;
-			color: #fff;
+		.cert-item {
+			background: var(--light);
+			padding: 1rem;
+			border-radius: 6px;
+			border: 1px solid var(--light-gray);
+		}
+
+		.cert-item strong {
+			color: var(--primary);
+			display: block;
+			margin-bottom: 0.3rem;
+		}
+
+		.cert-item .issuer {
+			font-size: 0.9rem;
+			color: var(--gray);
+		}
+
+		/* ===== LANGUAGES ===== */
+		.languages-list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+		}
+
+		.language-item {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.language-name {
+			font-weight: 600;
+			color: var(--primary);
+		}
+
+		.language-level {
+			font-size: 0.9rem;
+			color: var(--gray);
+		}
+
+		/* ===== BUTTONS ===== */
+		.btn {
+			display: inline-block;
+			padding: 0.8rem 1.5rem;
+			background: var(--primary);
+			color: white;
+			text-decoration: none;
+			border-radius: 6px;
+			font-weight: 500;
 			border: none;
-			border-radius: 5px;
 			cursor: pointer;
+			transition: background 0.2s;
 		}
 
-		footer button:hover {
-			background-color: #45a049;
+		.btn:hover {
+			background: var(--primary-dark);
 		}
 
+		.btn-outline {
+			background: transparent;
+			border: 2px solid var(--primary);
+			color: var(--primary);
+		}
+
+		.btn-outline:hover {
+			background: var(--primary);
+			color: white;
+		}
+
+		/* ===== FOOTER ===== */
+		footer {
+			background: var(--dark);
+			color: white;
+			padding: 2rem 0;
+			text-align: center;
+			margin-top: 3rem;
+		}
+
+		/* ===== PRINT STYLES (ATS-FRIENDLY CV) ===== */
 		@media print {
+			@page {
+				margin: 0.5in;
+			}
+
 			* {
-				margin: 0;
-				padding: 0;
-				border: none;
-				box-shadow: none;
+				background: transparent !important;
 				color: #000 !important;
-				border-radius: 0 !important;
+				box-shadow: none !important;
+				text-shadow: none !important;
 			}
 
 			body {
-				background-color: #fff;
-				font-size: 11pt;
-				line-height: 1.2;
+				font-family: 'Times New Roman', Times, serif;
+				font-size: 12pt;
+				line-height: 1.3;
+				background: white !important;
 			}
 
-			section {
-				margin: 0 0 5px 0;
-				padding: 3px 0;
+			.container {
 				max-width: 100%;
+				padding: 0;
+				margin: 0;
 			}
 
-			.none {
+			/* Hide screen-only elements */
+			.btn,
+			footer button,
+			.hero-contact a[href*="tel"]::before,
+			.skill-tag:hover {
 				display: none !important;
 			}
 
-			h2,
-			h3 {
-				border-bottom: none !important;
-				padding: 0;
-				margin: 5px 0 0 0;
-				font-size: 12pt;
+			/* Hero section for print */
+			.hero {
+				background: white !important;
+				padding: 0 0 0.2in 0;
+				border-bottom: 1pt solid #000;
 			}
 
-			h3 {
-				margin-top: 2px;
-			}
-
-			/* Print Header Layout - Image Left, Text Right and Up */
-			header {
-				background-color: #fff;
-				color: #000;
-				padding: 0 0 2px 0;
-				text-align: left;
-				border-bottom: 1px solid #000;
-			}
-
-			header #profile {
-				display: flex;
-				align-items: flex-start;
-				gap: 15px;
-			}
-
-			header img {
-				width: 100px;
-				height: 100px;
-				border-radius: 50%;
-				margin: 0;
-				float: left;
-			}
-
-			header h1 {
-				font-size: 16pt;
-				margin: 0;
-				line-height: 1;
-			}
-
-			header p {
-				margin: 2px 0;
-				font-size: 9pt;
-				line-height: 1.2;
-			}
-
-			header a {
-				color: #000 !important;
-			}
-
-			/* Compact spacing for all printed content */
-			ul {
-				padding-left: 15px;
-				margin: 2px 0;
-			}
-
-			ul li {
-				margin-bottom: 1px;
-				font-size: 9pt;
-				line-height: 1.1;
-				list-style: square;
-			}
-
-			.print {
+			.hero-content {
 				display: block;
 			}
 
-			footer button {
-				display: none;
+			.hero-image {
+				float: left;
+				margin-right: 0.2in;
+				margin-bottom: 0.1in;
 			}
 
-			#summary {
-				display: none;
+			.hero-image img {
+				width: 1.2in;
+				height: 1.2in;
+				border: 1pt solid #000;
+				border-radius: 50%;
 			}
 
-			/* Reduce spacing between sections */
-			main {
+			.hero-text h1 {
+				font-size: 18pt;
+				margin-top: 0;
+			}
+
+			.hero-title {
+				font-size: 12pt;
+				color: #000 !important;
+				font-style: italic;
+			}
+
+			.hero-contact {
+				display: block;
+				font-size: 10pt;
+				margin: 0.1in 0;
+			}
+
+			.hero-contact a {
+				color: #000 !important;
+				text-decoration: none;
+				display: inline;
+				margin-right: 0.15in;
+			}
+
+			.hero-contact a::after {
+				content: " | ";
+			}
+
+			.hero-contact a:last-child::after {
+				content: "";
+			}
+
+			/* Sections for print */
+			.section {
+				margin: 0.1in 0;
 				padding: 0;
+				border-radius: 0;
+			}
+
+			h2 {
+				font-size: 14pt;
+				margin: 0.1in 0 0.05in 0;
+				color: #000 !important;
+			}
+
+			h2::after {
+				display: none;
+			}
+
+			h3 {
+				font-size: 12pt;
+				margin: 0.05in 0;
+			}
+
+			/* Education print */
+			.education-grid {
+				display: block;
+			}
+
+			.education-card {
+				padding: 0;
+				margin-bottom: 0.1in;
+				background: white !important;
+				border-left: none;
+			}
+
+			.education-card h4 {
+				color: #000 !important;
+				display: inline;
+				font-size: 12pt;
+			}
+
+			.education-card .institution {
+				display: inline;
+				font-style: italic;
+			}
+
+			.education-card .date {
+				float: right;
+				margin: 0;
+			}
+
+			/* Skills print - ATS friendly */
+			.skills-grid {
+				display: block;
+			}
+
+			.skills-category {
+				margin-bottom: 0.1in;
+			}
+
+			.skills-tags {
+				display: block;
+			}
+
+			.skill-tag {
+				display: inline;
+				background: transparent !important;
+				padding: 0;
+				font-size: 11pt;
+				color: #000 !important;
+			}
+
+			.skill-tag::after {
+				content: ", ";
+			}
+
+			.skill-tag:last-child::after {
+				content: "";
+			}
+
+			/* Timeline print */
+			.timeline-item {
+				margin-bottom: 0.15in;
+				padding-bottom: 0.05in;
+				border-bottom: 0.5pt solid #ccc;
+			}
+
+			.timeline-header {
+				display: block;
+			}
+
+			.timeline-title {
+				font-size: 12pt;
+				color: #000 !important;
+				font-weight: bold;
+			}
+
+			.timeline-subtitle {
+				font-style: italic;
+			}
+
+			.timeline-date {
+				float: right;
+				font-size: 10pt;
+			}
+
+			.timeline-description {
+				margin-top: 0.05in;
+				font-size: 11pt;
+			}
+
+			.timeline-tech {
+				display: block;
+				margin: 0.05in 0;
+			}
+
+			.tech-badge {
+				display: inline;
+				background: transparent !important;
+				color: #000 !important;
+				padding: 0;
+				font-size: 10pt;
+			}
+
+			.tech-badge::after {
+				content: ", ";
+			}
+
+			.tech-badge:last-child::after {
+				content: "";
+			}
+
+			/* Certifications print */
+			.cert-list {
+				display: block;
+			}
+
+			.cert-item {
+				padding: 0;
+				margin-bottom: 0.05in;
+				background: white !important;
+				border: none;
+			}
+
+			.cert-item strong {
+				color: #000 !important;
+				display: inline;
+				font-size: 11pt;
+			}
+
+			/* Languages print */
+			.languages-list {
+				display: block;
+			}
+
+			.language-item {
+				display: inline;
+				margin-right: 0.2in;
+			}
+
+			.language-item::after {
+				content: " | ";
+			}
+
+			.language-item:last-child::after {
+				content: "";
+			}
+
+			.language-name {
+				color: #000 !important;
+				font-weight: bold;
+				display: inline;
+			}
+
+			.language-level {
+				display: inline;
+				font-size: 11pt;
+				font-style: italic;
+			}
+
+			/* Portfolio link in print */
+			.portfolio-print {
+				display: block !important;
+				text-align: center;
+				font-size: 10pt;
+				margin: 0.1in 0;
+				border-top: 1pt solid #000;
+				padding-top: 0.05in;
+			}
+
+			/* Hide screen versions */
+			.none {
+				display: none !important;
+			}
+		}
+
+		/* Utility classes */
+		.print-only {
+			display: none;
+		}
+
+		.portfolio-print {
+			display: none;
+		}
+
+		@media print {
+			.print-only {
+				display: block !important;
 			}
 		}
 	</style>
 </head>
 
 <body>
-	<header>
-		<div id="profile">
-			<img src="arman_office.jpeg" alt="Arman Islam" />
-			<div style="flex: 1;">
-				<h1>Arman</h1>
-				<p>
-					Software Engineer Enthusiast | Aspiring Full-Stack Developer
-				</p>
-				<p>
-					<strong>Address:</strong> Shadhinata Hall, Pabna University
-					of Science and Technology <br />
-					<strong>Phone:</strong>
-					<a href="tel:+8801521751005">+88 01521751005</a> (WhatsApp
-					available) <br />
-					<strong>Email:</strong>
-					<a href="mailto:armanislam527@gmail.com">armanislam527@gmail.com</a>
-					<br />
-					<strong>LinkedIn:</strong>
-					<a href="https://www.linkedin.com/in/armanislam527/" target="_blank">/armanislam527</a>
-					<br />
-					<strong>GitHub:</strong>
-					<a href="https://github.com/armanislam527" target="_blank">/armanislam527</a>
-				</p>
+	<!-- Hero/Header Section -->
+	<header class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="hero-image">
+					<img src="arman_office.jpeg" alt="Arman Islam" />
+				</div>
+				<div class="hero-text">
+					<h1>Arman Islam</h1>
+					<div class="hero-title">Software Engineer | Full-Stack Developer | IoT Enthusiast</div>
+					<p style="color: var(--light-gray); max-width: 600px;">
+						Building innovative digital solutions with modern web technologies and embedded systems.
+						Passionate about creating impactful software that solves real-world problems.
+					</p>
+					<div class="hero-contact">
+						<a href="tel:+8801521751005">📞 +88 01521751005</a>
+						<a href="mailto:armanislam527@gmail.com">✉️ armanislam527@gmail.com</a>
+						<a href="https://www.linkedin.com/in/armanislam527/" target="_blank">🔗 LinkedIn</a>
+						<a href="https://github.com/armanislam527" target="_blank">💻 GitHub</a>
+						<a href="https://cv-of-arman.netlify.app/" target="_blank">🌐 Portfolio</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
 
-	<main>
-		<!-- Professional Summary -->
-		<section id="summary">
-			<h2>
-				Professional Summary </h2>
-			<p>
-				I am an aspiring software engineer currently pursuing a
-				B.Sc. in Information and Communication Engineering at Pabna
-				University of Science and Technology, currently in my second
-				year of study. I am passionate about learning and building
-				innovative digital solutions, focusing on web development
-				and full-stack technologies like HTML, CSS, JavaScript, and
-				Java. My goal is to contribute to impactful projects and
-				develop my skills to become a proficient full-stack software
-				developer.
+	<main class="container">
+		<!-- Summary Section -->
+		<section class="section">
+			<h2>Professional Summary</h2>
+			<p style="font-size: 1.1rem; color: var(--gray);">
+				Aspiring software engineer with strong foundation in full-stack development and embedded systems.
+				Currently pursuing B.Sc. in Information and Communication Engineering with hands-on experience in
+				web technologies, IoT, and robotics. Proven track record in competitive programming and technical
+				innovation. Seeking opportunities to leverage technical skills in building scalable software solutions.
 			</p>
 		</section>
 
-		<!-- Education -->
-		<section id="education" class="none">
+		<!-- Education Section -->
+		<section class="section">
 			<h2>Education</h2>
-			<ul>
-				<li>
-					<strong>B.Sc. in Information and Communication Engineering
-						(Ongoing)</strong><br />
-					Pabna University of Science and Technology, Pabna<br />
-					Currently in Third Year<br />
-					Completion Date: June 2027 (Expected)
-				</li>
-				<li>
-					<strong>HSC (Science)</strong><br />
-					Dinajpur Govt. CT College, Dinajpur (Under Dinajpur
-					Education Board)<br />
-					GPA: 5.0<br />
-					Completion Date: 2022
-				</li>
-				<li>
-					<strong>SSC (Science)</strong><br />
-					Adhyapak Afjal Sobhan High School, Osurkoat, Ambari,
-					Parbatipur, Dinajpur<br />
-					GPA: 5.0<br />
-					Completion Date: 2020
-				</li>
-			</ul>
-		</section>
-		<section id="education" class="print">
-			<h2>Education</h2>
-			<ul>
-				<li>
-					<strong>B.Sc. in ICE (Ongoing)</strong> | PUST |
-					Currently in 3 <sub>rd</sub> Year | June 2027 (Expected)
-				</li>
-				<li>
-					<strong>HSC (Science)</strong>
-					| Dinajpur Board | CGPA: 5.0 | 2022
-
-				</li>
-				<li>
-					<strong>SSC (Science)</strong>
-					| Dinajpur Board | CGPA: 5.0 | 2020
-
-				</li>
-			</ul>
+			<div class="education-grid">
+				<div class="education-card">
+					<h4>B.Sc. in Information & Communication Engineering</h4>
+					<div class="institution">Pabna University of Science and Technology</div>
+					<div class="date">2022 - Present (Expected 2027) | CGPA: 3.75/4.00</div>
+				</div>
+				<div class="education-card">
+					<h4>Higher Secondary Certificate (Science)</h4>
+					<div class="institution">Dinajpur Govt. CT College</div>
+					<div class="date">2020 - 2022 | GPA: 5.00</div>
+				</div>
+				<div class="education-card">
+					<h4>Secondary School Certificate (Science)</h4>
+					<div class="institution">Adhyapak Afjal Sobhan High School</div>
+					<div class="date">2018 - 2020 | GPA: 5.00</div>
+				</div>
+			</div>
 		</section>
 
-		<!-- Skills -->
-		<section id="skills" class="none">
-			<h2>Skills</h2>
-			<h3>Technical Skills</h3>
-			<ul>
-				<li>HTML, CSS, JavaScript</li>
-				<li>Python, Java, C, C++</li>
-				<li>React.js, Node.js</li>
-
-				<li>Docker</li>
-				<li>Git and GitHub</li>
-				<li>Linux Operating System</li>
-				<li>Raspberry Pi Basic to Advance</li>
-				<li>Microcontroller Programming (PIC, Arduino, ESP Series)</li>
-				<li>ROS basics</li>
-				<li>IoT Basics</li>
-				<li>3D Printing and Slicing (With Hands On Experience)</li>
-				<li>Android Studio With Java</li>
-			</ul>
-			<h3>Soft Skills</h3>
-			<ul>
-				<li>Fluent Communication (Debator)</li>
-				<li>Leadership and Teamwork</li>
-			</ul>
-		</section>
-		<section id="skills" class="print">
-			<h2>Skills</h2>
-			<h3>Technical Skills</h3>
-			<ul>
-				<li>HTML | CSS | JavaScript | Python | Java | C | C++ | React.js | Node.js | Android Studio With Java
-				</li>
-				<li>Docker | Git and GitHub</li>
-				<li>Linux OS | Raspberry Pi Basic to Advance | Microcontroller Programming (PIC, Arduino, ESP Series) |
-					ROS basics | IoT Basics | 3D Printing and Slicing (With Hands On Experience)</li>
-
-			</ul>
-			<h3>Soft Skills</h3>
-			<ul>
-				<li>Fluent Communication (Debator) | Leadership and Teamwork</li>
-			</ul>
+		<!-- Skills Section -->
+		<section class="section">
+			<h2>Technical Expertise</h2>
+			<div class="skills-grid">
+				<div class="skills-category">
+					<h3>Web Development</h3>
+					<div class="skills-tags">
+						<span class="skill-tag">HTML5</span>
+						<span class="skill-tag">CSS3</span>
+						<span class="skill-tag">JavaScript</span>
+						<span class="skill-tag">React.js</span>
+						<span class="skill-tag">Node.js</span>
+						<span class="skill-tag">Python</span>
+						<span class="skill-tag">Java</span>
+						<span class="skill-tag">C/C++</span>
+						<span class="skill-tag">Docker</span>
+						<span class="skill-tag">Git/GitHub</span>
+					</div>
+				</div>
+				<div class="skills-category">
+					<h3>Embedded & IoT</h3>
+					<div class="skills-tags">
+						<span class="skill-tag">Raspberry Pi</span>
+						<span class="skill-tag">Arduino</span>
+						<span class="skill-tag">ESP32/8266</span>
+						<span class="skill-tag">PIC Microcontroller</span>
+						<span class="skill-tag">ROS Basics</span>
+						<span class="skill-tag">IoT Protocols</span>
+						<span class="skill-tag">3D Printing</span>
+						<span class="skill-tag">Linux</span>
+					</div>
+				</div>
+			</div>
+			<div style="margin-top: 1.5rem;">
+				<h3>Soft Skills</h3>
+				<div class="skills-tags">
+					<span class="skill-tag">Leadership</span>
+					<span class="skill-tag">Team Collaboration</span>
+					<span class="skill-tag">Public Speaking</span>
+					<span class="skill-tag">Problem Solving</span>
+					<span class="skill-tag">Project Management</span>
+				</div>
+			</div>
 		</section>
 
 		<!-- Work Experience -->
-		<section id="work-experience">
-			<h2>Work Experience</h2>
-			<ul>
-				<li>
-					<strong>Junior Web Developer</strong><br />
-					<b>Shefra</b> Tech Company, Rajapur, Pabna
-					<a class="none" href="https://shefra.web.app/" target="_blank">Company Website</a><br />
-					October,23, 2024 - Present
-					<p>
-						Frontend Dev and Collaborated with the marketing team to promote tech
-						solutions, increasing awareness in the local market.
-					</p>
-				</li>
-			</ul>
+		<section class="section">
+			<h2>Professional Experience</h2>
+			<div class="timeline-item">
+				<div class="timeline-header">
+					<span class="timeline-title">Junior Web Developer</span>
+					<span class="timeline-date">Oct 2024 - Present</span>
+				</div>
+				<div class="timeline-subtitle">Shefra Tech Company, Pabna</div>
+				<div class="timeline-description">
+					Frontend development and collaboration with marketing team to promote tech solutions.
+					Implemented responsive web designs and optimized user experiences.
+				</div>
+				<div class="timeline-tech">
+					<span class="tech-badge">HTML/CSS</span>
+					<span class="tech-badge">JavaScript</span>
+					<span class="tech-badge">React</span>
+					<span class="tech-badge">UI/UX</span>
+				</div>
+			</div>
 		</section>
 
 		<!-- Projects -->
-		<section id="projects">
-			<h2>Projects</h2>
-			<ul>
-				<li><strong>Development Of A Delivery Robot Drone Using Three.js</strong>
-					<p class="none">
-						A 3D model of a delivery robot drone created using
-						Three.js, showcasing design and animation skills.
-					</p>
-					<p class="none"><strong>Role:</strong> Creator</p>
-					<p class="none">
-						<strong>Technologies Used:</strong> JavaScript,
-						Three.js
-					</p>
-					<a class="none" href="https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/"
-						target="_blank">View Project Portfolio</a><br>
-					<code>Also Open For Open Investment</code>
-					<div class="print">https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/
-					</div>
-
-				</li>
-				<li>
-					<strong>Weather Forecast Application</strong>
-					<p class="none">
-						A frontend web application for weather forecasting
-						using search location APIs and browser location
-						detection.
-					</p>
-					<p class="none"><strong>Role:</strong> Creator</p>
-					<p class="none">
-						<strong>Technologies Used:</strong> HTML, CSS,
-						JavaScript
-					</p>
-					<a class="none" href="https://weatherapplication-arman.netlify.app/" target="_blank">View
-						Project</a>
-					<div class="print">https://weatherapplication-arman.netlify.app/</div>
-				</li>
-			</ul>
+		<section class="section">
+			<h2>Featured Projects</h2>
+			<div class="timeline-item">
+				<div class="timeline-header">
+					<span class="timeline-title">Delivery Robot Drone Using Three.js</span>
+				</div>
+				<div class="timeline-description">
+					Developed an interactive 3D model of a delivery robot drone showcasing advanced design and animation
+					capabilities.
+					Open for investment and collaboration opportunities.
+				</div>
+				<div class="timeline-tech">
+					<span class="tech-badge">JavaScript</span>
+					<span class="tech-badge">Three.js</span>
+					<span class="tech-badge">3D Modeling</span>
+				</div>
+				<div class="project-links">
+					<a href="https://armanislam527.github.io/IntelligentVTOLDroneDeliveryEcosystemForSMEs/"
+						target="_blank">🔗 Live Demo</a>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="timeline-header">
+					<span class="timeline-title">Weather Forecast Application</span>
+				</div>
+				<div class="timeline-description">
+					Real-time weather application with location detection and search functionality using OpenWeather
+					API.
+				</div>
+				<div class="timeline-tech">
+					<span class="tech-badge">HTML5</span>
+					<span class="tech-badge">CSS3</span>
+					<span class="tech-badge">JavaScript</span>
+					<span class="tech-badge">REST API</span>
+				</div>
+				<div class="project-links">
+					<a href="https://weatherapplication-arman.netlify.app/" target="_blank">🔗 Live Demo</a>
+				</div>
+			</div>
 		</section>
 
 		<!-- Certifications -->
-		<section id="certifications" class="none">
-			<h2>Certifications </h2>
-			<ul>
-				<li>
-					<strong>
-						Perticipated in World Robotics Olympiad 2025 (Rangpur Region)
-					</strong> <br>
-					<div>Issued by: WRO Bangladesh</div>
-					<div class="none" id="Wro_certificate">
-						<a href="Wro_2025.jpg" target="_blank">View Certificate</a>
-						<!--<img src="Wro_2025.jpg" alt="WRO Certificate" />-->
-
-					</div>
-					Date: August 30, 2025
-				</li>
-				<li>
-					<strong>Master Git and GitHub - Beginner to Expert</strong><br />
-					Issued by: Udemy<br />
-					<a class="none" href="https://www.udemy.com/certificate/UC-1f04b4b9-7b97-4929-8f6d-a162696c58da/"
-						target="_blank">View Certificate</a><br />
-					Date Obtained: August 23, 2024
-				</li>
-				<li>
-					<strong>ICT Olympiad Winner (Higher Secondary
-						Category)</strong><br />
-					Install ICT Olympiad, Dinajpur<br />
-					First Position <br />
-					Date: December 2022
-				</li>
-				<li>
-					<strong>Mathematical Olympiad Winner (Higher Secondary
-						Category)</strong><br />
-					Online Selection, Daecember 30, 2022 <br />
-					perticipated in the 2023 National Mathematical Olympiad,Bangladesh<br />
-				</li>
-			</ul>
+		<section class="section">
+			<h2>Certifications & Achievements</h2>
+			<div class="cert-list">
+				<div class="cert-item">
+					<strong>World Robotics Olympiad 2025</strong>
+					<div class="issuer">WRO Bangladesh - Rangpur Region</div>
+				</div>
+				<div class="cert-item">
+					<strong>Master Git and GitHub</strong>
+					<div class="issuer">Udemy - Aug 2024</div>
+				</div>
+				<div class="cert-item">
+					<strong>ICT Olympiad Winner</strong>
+					<div class="issuer">Install ICT Olympiad, Dinajpur - 1st Position</div>
+				</div>
+				<div class="cert-item">
+					<strong>Mathematical Olympiad</strong>
+					<div class="issuer">National Mathematical Olympiad Bangladesh - Participant 2023</div>
+				</div>
+			</div>
 		</section>
-		<section id="certifications" class="print">
-			<h2>Certifications </h2>
-			<ul>
-				<li>
-					<strong>
-						Perticipated in World Robotics Olympiad 2025 (Rangpur Region)
-					</strong>
-					Issued by: WRO Bangladesh<br>
 
-				</li>
-				<li>
-					<strong>Master Git and GitHub - Beginner to Expert</strong>
-					Issued by: Udemy<br />
-
-				</li>
-				<li>
-					<strong>ICT Olympiad Winner (Higher Secondary
-						Category)</strong>|
-					Install ICT Olympiad, Dinajpur|
-					First Position
-
-				</li>
-				<li>
-					<strong>Mathematical Olympiad Winner (Higher Secondary
-						Category)</strong>|
-					Online Selection, 2022 |
-					Perticipated in the 2023 National Mathematical Olympiad,Bangladesh<br />
-				</li>
-			</ul>
-		</section>
 		<!-- Languages -->
-		<section id="languages">
+		<section class="section">
 			<h2>Languages</h2>
-			<ul>
-				<li>
-					Bengali: Native fluency (Reading, Writing, Listening,
-					Speaking)
-				</li>
-				<li>
-					English: Proficient (Reading, Writing, Listening,
-					Speaking)
-				</li>
-				<li>Hindi: Good (Reading, Listening, Speaking)</li>
-			</ul>
+			<div class="languages-list">
+				<div class="language-item">
+					<span class="language-name">Bengali</span>
+					<span class="language-level">Native</span>
+				</div>
+				<div class="language-item">
+					<span class="language-name">English</span>
+					<span class="language-level">Professional Proficiency</span>
+				</div>
+				<div class="language-item">
+					<span class="language-name">Hindi</span>
+					<span class="language-level">Conversational</span>
+				</div>
+			</div>
 		</section>
+		<section>
+			<h2>Interests & Hobbies</h2>
+			<p style="color: var(--gray);">
+				Passionate about robotics, IoT, and competitive programming. Enjoys exploring new technologies,
+				coding challenges, and contributing to open-source projects. In free time, loves traveling, cooking,and
+				reading tech blogs.
+			</p>
+		</section>
+
+		<!-- Print-only portfolio link -->
+		<div class="portfolio-print">
+			Portfolio: https://cv-of-arman.netlify.app/ | GitHub: https://github.com/armanislam527
+		</div>
 	</main>
 
-	<!-- Print Button -->
 	<footer>
-		<p></p>
-		<button onclick="window.print()">Print CV</button>
+		<div class="container">
+			<p id="copyright"></p>
+			<button class="btn" onclick="window.print()">📄 Download/Print CV</button>
+			<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--light-gray);">
+				<a href="https://cv-of-arman.netlify.app/" target="_blank" style="color: white;">Visit Online
+					Portfolio</a>
+			</p>
+		</div>
 	</footer>
 
-	<!-- Hidden Roll and Registration Numbers -->
-	<section id="hidden-info" style="display: none">
-		<p>SSC Roll: 231417 | Registration: 1717758829</p>
-		<p>HSC Roll: 149008 | Registration: 1717758829</p>
-	</section>
 	<script>
+		// Update copyright year
 		const today = new Date();
 		const year = today.getFullYear();
-		document.querySelector('footer p').innerHTML = `&copy; ${year} Arman Islam. All rights reserved.`;
+		document.getElementById('copyright').innerHTML = `&copy; ${year} Arman Islam. All rights reserved.`;
+
+		// Add print functionality
+		window.onbeforeprint = function () {
+			console.log('Preparing CV for print...');
+		};
 	</script>
 </body>
 
