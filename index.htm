@@ -81,6 +81,10 @@
 			width: 100%;
 		}
 
+		.hero-text {
+			text-align: left;
+		}
+
 		.hero-content {
 			display: flex;
 			align-items: center;
@@ -99,6 +103,7 @@
 			width: 180px;
 			height: 180px;
 			border-radius: 50%;
+			background: var(--gray);
 			border: 4px solid var(--primary);
 			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 			object-fit: cover;
@@ -117,8 +122,11 @@
 
 		.hero-contact {
 			display: flex;
+			text-align: left;
+			margin: 0;
 			flex-wrap: wrap;
-			gap: 1.5rem;
+			gap: 0;
+			/* padding: 5px 10px; */
 			margin-top: 1.5rem;
 		}
 
@@ -128,6 +136,7 @@
 			display: flex;
 			align-items: center;
 			gap: 0.5rem;
+			padding: 0.3rem 0.5rem;
 			transition: color 0.2s;
 		}
 
@@ -384,6 +393,11 @@
 				text-align: center;
 			}
 
+			.hero-text {
+				text-align: center;
+				align-items: center;
+			}
+
 			.hero-image {
 				margin-bottom: 1rem;
 			}
@@ -394,6 +408,10 @@
 		}
 
 		.portfolio-print {
+			display: none;
+		}
+
+		.print {
 			display: none;
 		}
 
@@ -465,13 +483,19 @@
 			.hero-image img {
 				width: 0.8in;
 				height: 0.8in;
-				border: 1pt solid #000;
-				border-radius: 0.12in;
+				border: 0.5pt solid var(--gray);
+				/* border-radius: 0.12in;
+				 border: none; */
 			}
 
 			.hero-text h1 {
 				font-size: 16pt;
 				margin: 0;
+			}
+
+			.hero-text {
+				text-align: left;
+				align-items: left;
 			}
 
 			.hero-title {
@@ -489,8 +513,10 @@
 			.hero-contact {
 				display: flex;
 				flex-wrap: wrap;
+				align-items: left;
+
 				gap: 0;
-				font-size: 8.8pt;
+				font-size: 10pt;
 				/* margin: 0.04in 0 0 0; */
 				margin-top: 0;
 			}
@@ -499,8 +525,9 @@
 				color: #000 !important;
 				text-decoration: none;
 				display: inline-flex;
-				border-left: #000 0.5pt solid;
-				padding-left: 0.05in;
+
+				/* border-left: #000 0.5pt solid; */
+				padding: 0;
 				/* margin-right: 0.05in; */
 			}
 
@@ -581,6 +608,12 @@
 
 			}
 
+			.skills-category h3 {
+				font-size: 10.5pt;
+				color: #000 !important;
+				margin: 0.02in 0 0.02in 0;
+			}
+
 			.skills-tags {
 				display: flex;
 				flex-wrap: wrap;
@@ -602,8 +635,8 @@
 			}
 
 			.timeline-item {
-				margin-bottom: 0;
-				padding-bottom: 0;
+				margin: 0;
+				padding: 0;
 				border: none;
 				/* border-bottom: 0.5pt solid #cccccc; */
 				page-break-inside: avoid;
@@ -618,16 +651,25 @@
 
 			.timeline-header {
 				display: block;
+				margin: 0;
+				padding: 0;
 			}
 
 			.project-links {
 				display: none;
 			}
 
+			#project-title {
+				display: block !important;
+			}
+
 			.timeline-title {
+				display: block;
 				font-size: 10.5pt;
 				color: #000 !important;
 				font-weight: bold;
+				margin: 0;
+				padding: 0;
 			}
 
 			.timeline-subtitle {
@@ -714,6 +756,14 @@
 				font-style: italic;
 			}
 
+			.print {
+				display: block !important;
+				margin: 0;
+				padding: 0;
+				font-size: 8pt;
+				color: #000 !important;
+			}
+
 			/*.portfolio-print {
 				display: block !important;
 				margin-top: 0.1in;
@@ -734,7 +784,7 @@
 		<div class="container">
 			<div class="hero-content">
 				<div class="hero-image">
-					<img src="arman_office.jpeg" alt="Arman Islam" />
+					<img src="arman_transparent.png" alt="Arman Islam" />
 				</div>
 				<div class="hero-text">
 					<h1>Arman</h1>
@@ -784,7 +834,8 @@
 		<section class="section">
 			<h2>Professional Summary</h2>
 			<p style="font-size: 1.1rem; color: var(--gray);">
-				Aspiring software engineer and embedded systems enthusiast with strong foundation in full-stack development and embedded systems.
+				Aspiring software engineer and embedded systems enthusiast with strong foundation in full-stack
+				development and embedded systems.
 				Currently pursuing B.Sc. in Information and Communication Engineering with hands-on experience in
 				web technologies, IoT, and robotics. Proven track record in competitive programming and technical
 				innovation. Seeking opportunities to leverage technical skills in building impactful hardware and
@@ -800,17 +851,17 @@
 					<h4>B.Sc. in Information & Communication Engineering</h4>
 					<div class="institution">Pabna University of Science and Technology</div>
 					<div><em>currently in 3 <sup>rd</sup> year 2 <sup>nd</sup> semeseter</em></div>
-					<div class="date">2023 - Present (Expected 2027) | CGPA: 3.75/4.00</div>
+					<div class="date">2023 - Present (Expected 2027) | CGPA: 3.30/4.00</div>
 				</div>
 				<div class="education-card">
 					<h4>Higher Secondary Certificate (Science)</h4>
 					<div class="institution">Dinajpur Govt. City College</div>
-					<div class="date">2020 - 2022 | GPA: 5.00</div>
+					<div class="date">2022 | GPA: 5.00</div>
 				</div>
 				<div class="education-card">
 					<h4>Secondary School Certificate (Science)</h4>
 					<div class="institution">Adhyapak Afjal Sobhan High School</div>
-					<div class="date">2018 - 2020 | GPA: 5.00</div>
+					<div class="date">2020 | GPA: 5.00</div>
 				</div>
 			</div>
 		</section>
@@ -925,7 +976,7 @@
 					Implemented responsive web designs and optimized user experiences.
 				</div>
 				<div class="timeline-tech">
-					<span class="tech-badge">HTML/CSS	</span>
+					<span class="tech-badge">HTML/CSS </span>
 					<span class="tech-badge">JavaScript </span>
 					<span class="tech-badge">React </span>
 					<span class="tech-badge">UI/UX </span>
@@ -935,7 +986,8 @@
 
 		<!-- Projects -->
 		<section class="section">
-			<h2>Featured Projects</h2>
+			<h2 id="project-title">Featured Projects<span class="print">portfolio for details</span></h2>
+
 			<div class="projects-container">
 
 				<div class="timeline-item">
@@ -1055,7 +1107,7 @@
 		// Update copyright year
 		const today = new Date();
 		const year = today.getFullYear();
-		document.getElementById('copyright').innerHTML = `&copy; ${year} Arman Islam. All rights reserved.`;
+		document.getElementById('copyright').innerHTML = `&copy; ${year} Arman. All rights reserved.`;
 
 		// Add print functionality
 		window.onbeforeprint = function () {
