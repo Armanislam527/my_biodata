@@ -9,7 +9,7 @@
 	<meta name="description"
 		content="Arman's personal portfolio showcasing skills, projects, and experience in software engineering and embedded systems." />
 	<title>Arman - Software Engineer Portfolio</title>
-	<link rel="icon" href="arman_transparent.png" type="image/x-icon" />
+	<link rel="icon" href="image/arman_transparent.png" type="image/x-icon" />
 	<style>
 		/* ===== RESET & BASE STYLES ===== */
 		* {
@@ -105,7 +105,7 @@
 			display: none;
 		}
 
-		.hero-image img {
+		#himg {
 			width: 180px;
 			height: 180px;
 			border-radius: 50%;
@@ -165,6 +165,19 @@
 			background-color: var(--light-gray);
 		}
 
+		svg {
+			width: 40px;
+			height: 40px;
+
+			/* Tell the browser what the original internal canvas size was 
+			 Replace 24px with whatever your original icon canvas size was 
+			contain-intrinsic-size: 24px 24px;
+			aspect-ratio: 1 / 1;
+
+			 Force the inner shapes to scale up or down to fit the CSS boundaries 
+			object-fit: contain;*/
+		}
+
 		/* ===== EDUCATION GRID ===== */
 		.education-grid {
 			display: grid;
@@ -197,6 +210,12 @@
 			font-size: 0.9rem;
 			margin-top: 0.5rem;
 		}
+
+		/* #uni{
+			background-image: url(ICE.png);
+			background-size: cover;
+			
+		} */
 
 		/* ===== SKILLS ===== */
 		.skills-grid {
@@ -499,6 +518,10 @@
 				display: none !important;
 			}
 
+			img {
+				display: none;
+			}
+
 			.hero {
 				background: white !important;
 				padding: 0;
@@ -526,7 +549,8 @@
 				fill: #000 !important;
 			}
 
-			.hero-image img {
+			#himg {
+				display: block;
 				width: 0.8in;
 				height: 0.8in;
 				border: 0.5pt solid var(--gray);
@@ -684,9 +708,11 @@
 				padding: 0;
 				gap: 0;
 			}
-.level{
-	display: inline;
-}
+
+			.level {
+				display: inline;
+			}
+
 			.skills-category {
 				margin: 0;
 				padding: 0;
@@ -947,7 +973,7 @@
 		<div class="container">
 			<div class="hero-content">
 				<div class="hero-image">
-					<img src="arman_proffessional.jpeg" alt="Arman" />
+					<img id="himg" src="image/arman_proffessional.jpeg" alt="Arman" />
 				</div>
 				<div class="hero-text">
 					<h1>Arman</h1>
@@ -959,43 +985,41 @@
 
 					<div class="hero-contact">
 						<p class="location">
-							<svg xmlns="http://w3.org" viewBox="0 0 24 24" width="1rem" fill="currentColor">
+							<svg xmlns="http://w3.org" viewBox="0 0 24 24" width="1rem" fill="currentColor" viewBox="0 0 24 24">
 								<path
 									d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
 							</svg>
 							<span class="charset"> 📍</span> Rajapur, Pabna Sadar, Pabna, Bangladesh
 						</p>
 						<a href="tel:+8801521751005">
-							<svg xmlns="http://w3.org" width="1rem" viewBox="0 0 24 24" fill="currentColor">
+							<svg xmlns="http://w3.org" width="1rem" viewBox="0 0 24 24" fill="currentColor" viewBox="0 0 24 24">
 								<path
 									d="M6.62 10.79c1.44 2.83 3.71 5.14 6.54 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
 							</svg>
 							<span class="charset">📞</span> +88 01521751005</a>
 						<a href="mailto:armanislam527@gmail.com">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1rem" fill="none"
-								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-								<rect width="20" height="16" x="2" y="4" rx="2" />
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">								<rect width="20" height="16" x="2" y="4" rx="2" />
 								<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
 							</svg>
 							<span class="charset">✉️ </span>armanislam527@gmail.com</a>
 						<a href="https://www.linkedin.com/in/armanislam527/" target="_blank">
-							<svg id="linkedin" xmlns="http://w3.org" viewBox="0 0 24 24" width="1rem" fill="#0A66C2">
+							<svg id="linkedin" xmlns="http://w3.org" viewBox="0 0 24 24" width="1rem" fill="#0A66C2" viewBox="0 0 24 24">
 								<path
 									d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
 							</svg>
 							<span class="charset">🔗 </span>linkedin.com/in/armanislam527</a>
 						<a id="github" href="https://github.com/armanislam527" target="_blank">
-							<svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="1rem"
-								data-view-component="true" style="fill: currentColor;">
-								<path
+							<!-- <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="1rem"
+								data-view-component="true" style="fill: currentColor;" viewBox="0 0 24 24">								<path
 									d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82A7.48 7.48 0 0 0 8 2.84c-.68.003-1.36.09-2 .28-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
 								</path>
-							</svg>
+							</svg> -->
+							<img src="image/github-142-svgrepo-com.svg" alt="github">
 							<span class="charset">🔗 </span>github.com/armanislam527</a>
 						<a href="https://portfolio-of-arman.vercel.app/" target="_blank">
 							<svg xmlns="http://w3.org" viewBox="0 0 24 24" width="1rem" fill="none"
-								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-								<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">								<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
 								<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
 							</svg>
 							<span class="charset"> 🔗</span> portfolio-of-arman.vercel.app</a>
@@ -1023,7 +1047,7 @@
 		<section class="section">
 			<h2>Education</h2>
 			<div class="education-grid">
-				<span class="education-card" id="uni">
+				<span class="education-card" id="uni"><img src="image/ICE.png" alt="">
 					<span class="degree">B.Sc. in Information & Communication Engineering <span
 							class="none">(ICE)</span></span>
 					<span class="institution">Pabna University of Science and Technology</span>
@@ -1031,11 +1055,13 @@
 					<span class="date">2023 - Present (Expected 2027) | CGPA: 3.30/4.00</span>
 				</span>
 				<span class="education-card">
+					<img src="image/dgcc.jpg" alt="">
 					<span class="degree">Higher Secondary Certificate (Science)</span>
 					<span class="institution">Dinajpur Govt. City College</span>
 					<span class="date">2022 | GPA: 5.00</span>
 				</span>
 				<span class="education-card">
+					<img src="image/dinaajpur-shikssaabordd.jpg" alt="">
 					<span class="degree">Secondary School Certificate (Science)</span>
 					<span class="institution">Adhyapak Afjal Sobhan High School</span>
 					<span class="date">2020 | GPA: 5.00</span>
@@ -1050,10 +1076,11 @@
 				<div class="skills-category">
 					<h3>Frontend & Web Development </h3>
 					<div class="skills-tags">
-						<span class="skill-tag">HTML5 </span>
-						<span class="skill-tag">CSS3 </span>
-						<span class="skill-tag">JavaScript </span>
-						<span class="skill-tag">React.js </span>
+						<span class="skill-tag">
+							<img src="image/html-5-logo-svgrepo-com.svg" alt="">HTML5 </span>
+						<span class="skill-tag"><img src="image/css3-svgrepo-com.svg" alt="">CSS3 </span>
+						<span class="skill-tag"><img src="image/js-svgrepo-com.svg" alt="">JavaScript </span>
+						<span class="skill-tag"><img src="image/logo-react-svgrepo-com.svg" alt="">React.js </span>
 						<span class="skill-tag">Responsive Design </span>
 					</div>
 				</div>
@@ -1067,6 +1094,8 @@
 						<span class="skill-tag">C/C++ </span>
 						<span class="skill-tag">PHP </span>
 						<span class="skill-tag">MySQL </span>
+						<span class="skill-tag">MongoDB</span>
+						<span class="skill-tag">PostgreSQL</span>
 						<span class="skill-tag">Docker </span><span class="skill-tag">Debugging </span>
 					</div>
 				</div>
@@ -1302,7 +1331,7 @@
 				my endeavors.If required, I am willing to provide supporting documents and references to validate the
 				information presented herein.
 			</p>
-			<img src="cleansignature_arman.jpg" alt="Arman's Signature"
+			<img src="image/cleansignature_arman.jpg" alt="Arman's Signature"
 				style="width: 150px; height: auto; margin-top: 0.5rem;">
 		</section>
 
@@ -1312,7 +1341,7 @@
 				Portfolio: https://portfolio-of-arman.vercel.app/ | GitHub: https://github.com/armanislam527
 			</div>
 			<div class="hero-image qr-code">
-				<img src="QR_CODE_URL.png" alt="CV-QR Code" />
+				<img src="image/QR_CODE_URL.png" alt="CV-QR Code" />
 			</div>
 		</div>
 	</main>
@@ -1322,8 +1351,7 @@
 			<p id="copyright"></p>
 			<button class="btn" id="dwnbtn" onclick="window.print()"><svg xmlns="http://w3.org" viewBox="0 0 24 24"
 					width="1rem" fill="black" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-					stroke-linejoin="round">
-					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					stroke-linejoin="round" viewBox="0 0 24 24">					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
 					<polyline points="14 2 14 8 20 8"></polyline>
 					<line x1="16" y1="13" x2="8" y2="13"></line>
 					<line x1="16" y1="17" x2="8" y2="17"></line>
@@ -1334,8 +1362,7 @@
 				<a href="https://portfolio-of-arman.vercel.app/" target="_blank" style="color: white;">
 					<button class="btn" id="prtbtn">
 						<svg xmlns="http://w3.org" viewBox="0 0 24 24" height="1rem" weight="1rem" fill="none"
-							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">							<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
 							<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
 						</svg>
 						<p>Visit Online Portfolio</p>
@@ -1344,7 +1371,7 @@
 		</div>
 	</footer>
 
-	<script>
+	<script> 
 		// Update copyright year
 		const today = new Date();
 		const year = today.getFullYear();
