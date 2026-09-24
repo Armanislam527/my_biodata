@@ -9,5 +9,8 @@
 		c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742
 		c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193
 		C15.092,18.979,14.62,18.426,14.62,18.426z"><animate attributeName="opacity" values="0.8;0;0.8" dur="1.2s" repeatCount="indefinite"/></path>
+	
+	<!-- Updated Text Properties -->
+	<text x="15" y="24" font-family="'Fira Code', 'Courier New', Courier, monospace" font-size="3" fill="#ffffff" font-weight="bold" text-anchor="middle" letter-spacing="0">Download CV</text>
 </g>
 </svg>

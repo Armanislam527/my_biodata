@@ -111,7 +111,7 @@
         inkscape:connector-curvature="0"
         d="m565.93 589.49s-92.419 42.781-336.88 11.272c-3.3986-14.752-1.9696-65.389-1.9696-65.389l22.048-7.8208s-2.7035-304.16 1.2978-329.82c-3.6331-32.86 60.622-110.9 131.88-112.24 94.964-1.7801 142.46 87.382 140.79 92.436 10.892 28.449 22.239 344.67 22.239 344.67l19.042 5.2119 1.5517 61.671z"
     >
-      <animate attributeName="opacity" values="0.7; 1; 0.7" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1; 1; 0" dur="0.5s" repeatCount="indefinite" />
     </path>
     
     <path

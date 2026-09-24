@@ -36,18 +36,18 @@
   <!-- Drawn manually using paths and lines to avoid using '>' or '_' as text characters -->
   <g filter="url(#glow)">
     <!-- The '>' chevron -->
-    <path d="M 330 230 L 390 290 L 330 350" fill="none" stroke="#a6e3a1" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 200 200 L 390 290 L 200 380" fill="none" stroke="#a6e3a1" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
     
     <!-- The '_' underscore cursor -->
-    <line x1="415" y1="350" x2="505" y2="350" stroke="#a6e3a1" stroke-width="14" stroke-linecap="round"/>
+    <line x1="415" y1="380" x2="520" y2="380" stroke="#a6e3a1" stroke-width="14" stroke-linecap="round"/>
   </g>
 
   <!-- Bottom ssh text -->
   <!-- Using standard text element for 'ssh' as it doesn't violate the specific character constraints -->
-  <text x="85" y="505" font-family="'Fira Code', 'Courier New', Courier, monospace" font-size="42" fill="#cdd6f4" font-weight="bold" letter-spacing="3">ssh</text>
+  <text x="85" y="505" font-family="'Fira Code', 'Courier New', Courier, monospace" font-size="150" fill="#cdd6f4" font-weight="bold" letter-spacing="3">ssh</text>
   
   <!-- Subtle blinking block cursor after ssh for realism -->
-  <rect x="195" y="470" width="22" height="42" fill="#cdd6f4" opacity="0.8">
+  <rect x="400" y="420" width="24" height="100" fill="#cdd6f4" opacity="0.8">
     <animate attributeName="opacity" values="0.8;0;0.8" dur="1.2s" repeatCount="indefinite"/>
   </rect>
 
