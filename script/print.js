@@ -1,22 +1,26 @@
- const skillsList = [
-            'HTML5', 'CSS3', 'JavaScript', 'React.js', 'Node.js', 'Python', 'Java', 'C/C++', 'PHP', 'MySQL', 'MongoDB', 'Docker', 'Git/GitHub', 'Linux', 'Raspberry Pi', 'Arduino', 'ESP32/8266', 'PIC Microcontroller', 'ROS Basics', 'SolidWorks 3D', 'Ultimaker Cura', 'Proteus', 'Circuit Simulation', 'PCB Design Basics'
-        ];
-        const skillsEl = document.getElementById('skills');
-        skillsList.forEach(s => {
-            const span = document.createElement('span');
-            span.className = 'skill';
-            span.textContent = s;
-            skillsEl.appendChild(span);
-        });
-
-        document.getElementById('downloadPdf').addEventListener('click', () => {
+document.getElementById('downloadPdf').addEventListener('click', () => {
             const element = document.getElementById('cvpage');
             const opt = {
-                margin: 0.2,
+                margin: [0.1,.1,.1,.1],
                 filename: 'Arman_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, dpi: 300, letterRendering: true },
-                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+                image: { type: 'png', quality: 1 },
+                html2canvas: { scale: 3, dpi: 300, letterRendering: true,useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
-            html2pdf().set(opt).from(element).save();
+            const btn=document.getElementById("downloadPdf");
+            const origText=btn.innerHTML;
+            btn.innerHTML="Generating PDF...";
+            btn.disabled=true;
+
+            html2pdf().set(opt).from(element).save().then(
+                () => {
+                    btn.innerText=origText;
+                    btn.disabled=false;
+                }
+            ).catch(err=>{
+                console.error("Error generating PDF",err);
+                btn.innerHTML=origText;
+                btn.disabled=false;
+
+            });
         });

@@ -6,11 +6,114 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Arman - Printable CV</title>
     <link rel="icon" href="image/arman_transparent.png" type="image/x-icon" />
-    <!-- <link rel="stylesheet" href="style/print.css"> -->
-    <link rel="stylesheet" href="style/view.css">
-    
+    <link rel="stylesheet" href="print.css">
     <style>
-     
+        /* Reuse print CSS from index.htm but scoped for this page */
+        :root {
+            --primary: #2563eb;
+            --gray: #64748b;
+            --light: #f8fafc;
+            --light-gray: #e2e8f0
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11pt;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 18mm;
+            margin: 0 auto;
+            background: white
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 8px;
+            align-items: center
+        }
+
+        .photo {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            border: 1px solid #999;
+            object-fit: cover
+        }
+
+        h1 {
+            font-size: 16pt;
+            margin: 0
+        }
+
+        .sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin: 0
+        }
+
+        .contact {
+            font-size: 9pt;
+            margin-top: 4px
+        }
+
+        section {
+            margin-top: 8px
+        }
+
+        h2 {
+            font-size: 12pt;
+            margin: 0 0 4px 0
+        }
+
+        p,
+        li {
+            font-size: 9.5pt;
+            margin: 0
+        }
+
+        .two-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .skill {
+            font-size: 9pt
+        }
+
+        footer {
+            margin-top: 8px;
+            font-size: 8.5pt
+        }
+
+        .controls {
+            position: fixed;
+            right: 12px;
+            top: 12px;
+            z-index: 1000
+        }
+
+        .btn {
+            background: #2563eb;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer
+        }
     </style>
 </head>
 
@@ -87,7 +190,31 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="script/print.js"></script>
+    <script>
+        // const skillsList = [
+        //     'HTML5', 'CSS3', 'JavaScript', 'React.js', 'Node.js', 'Python', 'Java', 'C/C++', 'PHP', 'MySQL', 'MongoDB', 'Docker', 'Git/GitHub', 'Linux', 'Raspberry Pi', 'Arduino', 'ESP32/8266', 'PIC Microcontroller', 'ROS Basics', 'SolidWorks 3D', 'Ultimaker Cura', 'Proteus', 'Circuit Simulation', 'PCB Design Basics'
+        // ];
+        // const skillsEl = document.getElementById('skills');
+        // skillsList.forEach(s => {
+        //     const span = document.createElement('span');
+        //     span.className = 'skill';
+        //     span.textContent = s;
+        //     skillsEl.appendChild(span);
+        // });
+
+        document.getElementById('downloadPdf').addEventListener('click', () => {
+            const element = document.getElementById('cvpage');
+            const opt = {
+                margin: 0.2,
+                filename: 'Arman_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, dpi: 300, letterRendering: true },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+    <!-- <script src="script/viewcv.js"></script> -->
 </body>
 
 </html>
