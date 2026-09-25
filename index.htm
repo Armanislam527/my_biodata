@@ -149,7 +149,7 @@
 		}
 
 		.hero-contact a:hover {
-			color: var(--primary);
+			color: var(--apple);
 		}
 
 		/* ===== SECTIONS ===== */
@@ -367,7 +367,8 @@
 			caption-side: bottom;
 
 		}
-		figcaption{
+
+		figcaption {
 			position: relative;
 			top: -50px;
 		}
@@ -375,7 +376,7 @@
 		/* ===== CERTIFICATIONS ===== */
 		.cert-list {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			grid-template-columns: repeat(auto-fit);
 			gap: 1rem;
 		}
 
@@ -453,13 +454,18 @@
 			/* border-radius: 5px; */
 		}
 
+		#dwnbtn:hover {
+			scale: 2;
+			background-image: url(image/download-button.svg);
+		}
+
 		#prtbtn {
 			color: antiquewhite;
 			background-color: var(--gray);
 		}
 
 		.btn:hover {
-			background: var(--primary-dark);
+			/* background: var(--primary-dark); */
 		}
 
 		.btn-outline {
@@ -864,9 +870,11 @@
 			iframe {
 				display: none;
 			}
-figure{
-	display: none;
-}
+
+			figure {
+				display: none;
+			}
+
 			.timeline-title {
 				display: block;
 				font-size: 10.5pt;
