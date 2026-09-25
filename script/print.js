@@ -1,12 +1,16 @@
+const element = document.getElementById("cvpage");
+const progressBar = document.getElementById("progress-bar");
+const updateProgress = (text, percent) => {
+  btn.innerText = text;
+  progressBar.value = percent;
+};
+ const btn = document.getElementById("downloadPdf");
+  const origText = btn.innerHTML;
+
+  
 document.getElementById("downloadPdf").addEventListener("click", () => {
-  const element = document.getElementById("cvpage");
-  const progressBar = document.getElementById("progress-bar");
   progressBar.style.display = "block";
 
-  const updateProgress = (text, percent) => {
-    btn.innerText = text;
-    progressBar.value = percent;
-  };
   const opt = {
     margin: [0.1, 0.1, 0.1, 0.1],
     filename: "Arman_CV.pdf",
@@ -14,8 +18,7 @@ document.getElementById("downloadPdf").addEventListener("click", () => {
     html2canvas: { scale: 3, dpi: 300, letterRendering: true, useCORS: true },
     jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   };
-  const btn = document.getElementById("downloadPdf");
-  const origText = btn.innerHTML;
+ 
   btn.innerHTML = "Generating PDF...";
   btn.disabled = true;
 
@@ -41,6 +44,7 @@ document.getElementById("downloadPdf").addEventListener("click", () => {
     .save()
     .then(() => {
       btn.innerHTML = origText;
+      btn.disabled = false;
       progressBar.style.display = "none";
     })
     .catch((err) => {
