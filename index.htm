@@ -14,8 +14,20 @@
 </head>
 
 <body>
+	<nav>
+		<ul><link><a class="nav-link active" href="#home">Home</a></link>
+			<link><a class="nav-link" href="#professional_summery">Summery</a></link>
+			<link><a class="nav-link" href="#education">Education</a></link>
+			<link><a class="nav-link" href="#skills">Skills</a></link>
+			<link><a class="nav-link" href="#experience">Experience</a></link>
+			<link><a class="nav-link" href="#Projects">Projects</a></link>
+			<link><a class="nav-link" href="#achievement">Achievements</a></link>
+			<link><a class="nav-link" href="#language">Languages</a></link>
+			<link><a class="nav-link" href="#interests">Interests</a></link>
+		</ul>
+	</nav>
 	<!-- Hero/Header Section -->
-	<header class="hero">
+	<header class="hero" id="home">
 		<div class="container">
 			<div class="hero-content">
 				<div class="hero-image">
@@ -89,7 +101,7 @@
 
 	<main class="container">
 		<!-- Summary Section -->
-		<section class="section">
+		<section class="section" id="professional_summery">
 			<h2>Professional Summary</h2>
 			<p style="font-size: 1.1rem; color: var(--gray);">
 				Aspiring software engineer and embedded systems enthusiast with strong foundation in full-stack
@@ -102,7 +114,7 @@
 		</section>
 
 		<!-- Education Section -->
-		<section class="section">
+		<section class="section" id="education">
 			<h2>Education</h2>
 			<div class="education-grid">
 				<span class="education-card" id="uni">
@@ -129,7 +141,7 @@
 		</section>
 
 		<!-- Skills Section -->
-		<section class="section">
+		<section class="section" id="skills">
 			<h2>Technical Expertise & Skills</h2>
 			<div class="skills-grid">
 				<div class="skills-category">
@@ -278,7 +290,7 @@
 		</section>
 
 		<!-- Work Experience -->
-		<section class="section">
+		<section class="section" id="experience">
 			<h2>Professional Experience</h2>
 			<div class="timeline-item">
 				<div class="timeline-header">
@@ -300,7 +312,7 @@
 		</section>
 
 		<!-- Projects -->
-		<section class="section">
+		<section class="section" id="Projects">
 			<h2 id="project-title">Featured Projects<span class="print">portfolio for details</span></h2>
 
 			<div class="projects-container">
@@ -355,7 +367,7 @@
 		</section>
 
 		<!-- Certifications -->
-		<section class="section">
+		<section class="section" id="achievement">
 			<h2>Certifications & Achievements</h2>
 			<div class="cert-list">
 				<div class="cert-item skill-tag">
@@ -380,7 +392,7 @@
 		</section>
 
 		<!-- Languages -->
-		<section class="section">
+		<section class="section" id="language">
 			<h2>Languages</h2>
 			<div class="languages-list">
 				<div class="language-item">
@@ -401,7 +413,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section">
+		<section class="section" id="interests">
 			<h2>Interests & Hobbies</h2>
 			<p style="color: var(--gray);">
 				Passionate about robotics, IoT, and competitive programming. Enjoys exploring new technologies,
@@ -409,13 +421,13 @@
 				reading tech blogs.
 			</p>
 		</section>
-		<section class="section print">
+		<section class="section print" id="reference">
 			<h2>References</h2>
 			<p style="color: var(--gray);">
 				Available upon request. Please contact me via email or phone for professional references.
 			</p>
 		</section>
-		<section class="section print">
+		<section class="section print" id="statement">
 			<h2>Declaration</h2>
 			<p style="color: var(--gray);">
 				I hereby declare that the information provided in this CV is true and accurate to the best of my
@@ -438,7 +450,7 @@
 		</div>
 	</main>
 
-	<footer>
+	<footer id="footer">
 		<div class="container">
 			<p id="copyright"></p>
 			<button class="btn " id="dwnbtn" onclick="window.open('cv.htm','_blank')">
@@ -459,6 +471,7 @@
 			console.log('Preparing CV for print...');
 		};
 	</script>
+	<script src="script/script.js"></script>
 </body>
 
 </html>
