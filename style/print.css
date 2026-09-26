@@ -31,12 +31,12 @@ body {
   cursor: pointer;
 }
 #progress-bar {
-    margin: auto;
-    display: none;
+  margin: auto;
+  display: none;
   border-radius: 50% !important;
 }
-.btn img{
-    height:1em;
+.btn img {
+  height: 1em;
 }
 .page {
   width: auto;
@@ -66,8 +66,8 @@ main.container {
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 0.85in 1fr;
+  display: flex;
+  /* grid-template-columns: 0.85in 1fr; */
   align-items: center;
   gap: 0;
 }
@@ -82,10 +82,12 @@ main.container {
 }
 
 #himg {
-  display: block;
+  justify-content: end;
+  align-items: end;
+  display: inline;
   width: 0.8in;
   /* height: 0.8in; */
-  border-radius: 50%;
+  border-radius: 5px;
   border: 0.5pt solid var(--gray);
   /* border-radius: 0.12in;
 				 border: none; */
@@ -461,6 +463,8 @@ h3 {
 
 #signature {
   display: block;
+  width: 150px;
+
 }
 
 .print {
@@ -478,7 +482,7 @@ h3 {
 .none {
   display: none !important;
 }
-
+/* .portfolio-print{display: none;} */
 /*.portfolio-print {
 				display: block !important;
 				margin-top: 0.1in;

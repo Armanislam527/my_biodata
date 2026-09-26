@@ -4,10 +4,9 @@ const updateProgress = (text, percent) => {
   btn.innerText = text;
   progressBar.value = percent;
 };
- const btn = document.getElementById("downloadPdf");
-  const origText = btn.innerHTML;
+const btn = document.getElementById("downloadPdf");
+const origText = btn.innerHTML;
 
-  
 document.getElementById("downloadPdf").addEventListener("click", () => {
   progressBar.style.display = "block";
 
@@ -15,10 +14,17 @@ document.getElementById("downloadPdf").addEventListener("click", () => {
     margin: [0.1, 0.1, 0.1, 0.1],
     filename: "Arman_CV.pdf",
     image: { type: "png", quality: 1 },
-    html2canvas: { scale: 3, dpi: 300, letterRendering: true, useCORS: true },
+    html2canvas: {
+      scale: 3,
+      dpi: 300,
+      letterRendering: true,
+      useCORS: true,
+      scrollY: 0, // Prevents canvas cutting issues if the user is scrolled down the page
+      scrollX: 0,
+    },
     jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   };
- 
+
   btn.innerHTML = "Generating PDF...";
   btn.disabled = true;
 
