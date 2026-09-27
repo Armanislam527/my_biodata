@@ -2,7 +2,7 @@ const element = document.getElementById("cvpage");
 const progressBar = document.getElementById("progress-bar");
 const btn = document.getElementById("downloadPdf");
 const origText = btn ? btn.innerHTML : "Download PDF";
-
+const previewbox=document.getElementById("preview")
 const updateProgress = (text, percent) => {
   if (!btn || !progressBar) return;
   btn.innerText = text;
@@ -34,6 +34,7 @@ const waitForImages = () => {
 };
 
 btn?.addEventListener("click", async () => {
+  previewbox.remove();
   if (!element || !progressBar || !btn) return;
 
   progressBar.style.display = "block";

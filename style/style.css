@@ -456,7 +456,7 @@ nav ul li{
 			flex-direction: column;
 			justify-content: center;
 			height: fit-content;
-			width: 1rem;
+			/* width: 1rem; */
 			border-radius: 5%;
 			align-items: center;
 			color: #e2e8f0;

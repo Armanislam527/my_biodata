@@ -1,37 +1,37 @@
-const element = document.getElementById("cvpage");
-const progressBar = document.getElementById("progress-bar");
-const btn = document.getElementById("downloadPdf");
-const origText = btn ? btn.innerHTML : "Download PDF";
+// const element = document.getElementById("cvpage");
+// const progressBar = document.getElementById("progress-bar");
+// const btn = document.getElementById("downloadPdf");
+// const origText = btn ? btn.innerHTML : "Download PDF";
+// const previewbox=document.getElementById("preview")
+// const updateProgress = (text, percent) => {
+//   if (!btn || !progressBar) return;
+//   btn.innerText = text;
+//   progressBar.value = percent;
+// };
 
-const updateProgress = (text, percent) => {
-  if (!btn || !progressBar) return;
-  btn.innerText = text;
-  progressBar.value = percent;
-};
+// const prepareImagesForPdf = () => {
+//   if (!element) return;
 
-const prepareImagesForPdf = () => {
-  if (!element) return;
+//   element.querySelectorAll("img").forEach((img) => {
+//     if (!img.crossOrigin) {
+//       img.crossOrigin = "anonymous";
+//     }
+//   });
+// };
 
-  element.querySelectorAll("img").forEach((img) => {
-    if (!img.crossOrigin) {
-      img.crossOrigin = "anonymous";
-    }
-  });
-};
+// const waitForImages = () => {
+//   if (!element) return Promise.resolve();
 
-const waitForImages = () => {
-  if (!element) return Promise.resolve();
-
-  const images = [...element.querySelectorAll("img")];
-  return Promise.all(
-    images.map((img) => {
-      if (img.complete) return Promise.resolve();
-      return new Promise((resolve) => {
-        img.onload = img.onerror = resolve;
-      });
-    })
-  );
-};
+//   const images = [...element.querySelectorAll("img")];
+//   return Promise.all(
+//     images.map((img) => {
+//       if (img.complete) return Promise.resolve();
+//       return new Promise((resolve) => {
+//         img.onload = img.onerror = resolve;
+//       });
+//     }),
+//   );
+// };
 
 // Helper function to handle the preview modal creation and display
 const showPdfPreview = (pdfUrl) => {
@@ -42,9 +42,9 @@ const showPdfPreview = (pdfUrl) => {
   // Create the modal container wrapper
   const modal = document.createElement("div");
   modal.id = "pdf-preview-modal";
-  modal.style.position = "fixed";
-  modal.style.top = "0";
-  modal.style.left = "0";
+//   modal.style.position = "fixed";
+//   modal.style.top = "0";
+//   modal.style.left = "0";
   modal.style.width = "100vw";
   modal.style.height = "100vh";
   modal.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
@@ -91,10 +91,11 @@ const showPdfPreview = (pdfUrl) => {
   // Assemble and append to body
   modal.appendChild(toolbar);
   modal.appendChild(iframe);
-  document.body.appendChild(modal);
+  previewbox.appendChild(modal);
 };
-
-btn?.addEventListener("click", async () => {
+// btn?.addEventListener("click", async () => {
+const previewfunc= async () => {
+    previewbox.remove();
   if (!element || !progressBar || !btn) return;
 
   progressBar.style.display = "block";
@@ -106,7 +107,7 @@ btn?.addEventListener("click", async () => {
     await waitForImages();
 
     const opt = {
-      margin:[5, 5, 5, 5],
+      margin: [5, 5, 5, 5],
       filename: "Arman_CV.pdf",
       image: { type: "jpeg", quality: 0.92 },
       html2canvas: {
@@ -119,7 +120,10 @@ btn?.addEventListener("click", async () => {
         scrollY: 0,
         scrollX: 0,
         ignoreElements: (el) =>
-          el && (el.id === "downloadPdf" || el.id === "progress-bar" || el.id === "pdf-preview-modal"),
+          el &&
+          (el.id === "downloadPdf" ||
+            el.id === "progress-bar" ||
+            el.id === "pdf-preview-modal"),
         logging: false,
       },
       jsPDF: {
@@ -153,7 +157,7 @@ btn?.addEventListener("click", async () => {
       .then(() => {
         updateProgress("Opening Preview...", 100);
       })
-      .outputPdf('bloburl'); 
+      .outputPdf("bloburl");
 
     // Launch the interactive on-screen iframe viewer
     showPdfPreview(pdfBlobUrl);
@@ -167,4 +171,5 @@ btn?.addEventListener("click", async () => {
     btn.disabled = false;
     progressBar.style.display = "none";
   }
-});
+};
+previewfunc();
