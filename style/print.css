@@ -1,3 +1,8 @@
+:root {
+  /* High-accuracy A4 dimensions scaled gracefully for screen layout */
+  --pdf-width: 210mm;
+  --pdf-height: 297mm;
+}
 * {
   background: transparent;
   color: #000;
@@ -8,13 +13,15 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Times New Roman", Times, serif;
-  font-size: 10.8pt;
+  background-color: #f4f4f7; /* Contrast background for debugging */
+  display: flex;
+  justify-content: center;
   line-height: 1;
-  background: white !important;
-  width: 100%;
+  align-items: flex-start;
 }
-
 .controls {
   position: fixed;
   right: 12px;
@@ -87,7 +94,7 @@ main.container {
   display: inline;
   width: 0.8in;
   /* height: 0.8in; */
-  border-radius: 5px;
+  border-radius: 50%;
   border: 0.5pt solid var(--gray);
   /* border-radius: 0.12in;
 				 border: none; */
@@ -174,6 +181,7 @@ h2::after {
 
 h3 {
   font-size: 10.5pt;
+  /* font-weight: bold; */
   margin: 0;
 }
 
@@ -207,6 +215,7 @@ h3 {
 .degree {
   color: #000 !important;
   display: block;
+  font-weight: bold;
   font-size: 9.8pt;
   white-space: nowrap;
   margin: 0;
@@ -215,7 +224,7 @@ h3 {
 .education-card .institution {
   display: inline;
   font-style: italic;
-  font-size: 9pt;
+  /* font-size: 9pt; */
 }
 
 .education-card .institution::after {
@@ -258,11 +267,11 @@ h3 {
 }
 
 .skills-category h3 {
-  /* font-size: 10.5pt; */
+  font-size: 10pt;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   display: inline-block;
-  font-style: italic;
+  /* font-style: italic; */
   color: #000 !important;
   margin: 0;
   white-space: nowrap;
@@ -270,7 +279,7 @@ h3 {
 }
 
 .skills-category h3::after {
-  content: ":   ";
+  content: ":  ";
 }
 
 .skills-tags {
@@ -358,7 +367,7 @@ h3 {
 
 .timeline-description {
   margin-top: 0;
-  font-size: 9pt;
+  /* font-size: 9pt; */
 }
 
 .timeline-tech {
@@ -464,7 +473,6 @@ h3 {
 #signature {
   display: block;
   width: 150px;
-
 }
 
 .print {

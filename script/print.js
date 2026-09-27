@@ -29,7 +29,7 @@ const waitForImages = () => {
       return new Promise((resolve) => {
         img.onload = img.onerror = resolve;
       });
-    })
+    }),
   );
 };
 
@@ -45,7 +45,7 @@ btn?.addEventListener("click", async () => {
     await waitForImages();
 
     const opt = {
-      margin: [5, 5, 5, 5],
+      margin: [0, 0, 0, 0],
       filename: "Arman_CV.pdf",
       image: { type: "jpeg", quality: 0.92 },
       html2canvas: {
